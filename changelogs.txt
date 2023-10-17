@@ -1,60 +1,309 @@
+v0.0.3
+Additions:
+    -Added a sudo same-system multiplayer system.
+    -Added a version number in the debug console.
+
 v0.0.8
--Overhauled movement. Players now move smoothly, and multiple players can move at the
-same time.
+Changes:
+    -Overhauled movement. Players now move smoothly, and multiple players can move at the
+    same time.
+        -This allows for true same-system multiplayer.
 
 v0.0.8.1
--Changed Shrink Limit from 4 pixels to 8
+Changes:
+    -Changed Shrink Limit from 4 pixels to 8
 
 v0.0.9
--Edge Growing and Shrinking is now a toggle.
-    -It is off by default and can be toggled with G.
+Changes:
+    -Edge Growing and Shrinking is now a toggle.
+        -It is off by default and can be toggled with G.
 
 v0.0.10
--Speed can now be increased and decreased with = and - respectively.
+Additions:
+    -Speed can now be increased and decreased with = and - respectively.
 
 v0.0.11
--Pressing ESC now resets everything.
+Additions:
+    -Pressing ESC now resets everything.
 
 v0.0.12
--Added Sprinting.
-    -Triggered by pressing SPACE for player 1, and NumberPad0 for player 2.
--Changed player 2 controls.
-    -Now uses numberpad to move. Num8 for up, Num4 for left, Num5 for down, and Num6 for right.
+Additions:
+    -Added Sprinting.
+        -Triggered by pressing SPACE for player 1, and NumberPad0 for player 2.
+Changes:
+    -Changed player 2 controls.
+        -Now uses numberpad to move. Num8 for up, Num4 for left, Num5 for down, and Num6 for right.
 Known Bugs:
--Sprinting is based on default speed.
+    -Sprinting is based on default speed.
 
 v0.0.13
--Sprinting now uses a timer based system to limit how long players can sprint for.
--Rearranged the debug statistics slightly.
--Added a control guide that automatically appears when the game starts.
-    -Can be disabled/re-enabled with F2.
+Additions:
+    -Added a control guide that automatically appears when the game starts.
+        -Can be disabled/re-enabled with F2.
+Changes:
+    -Sprinting now uses a timer based system to limit how long players can sprint for.
+    -Rearranged the debug statistics slightly.
 Bug Fixes:
--Sprinting is based on current speed now.
+    -Sprinting is based on current speed now.
 
 v0.0.13.1
--Added "Press F2 To See Controls" text to the top right corner.
--Control Guide is now off by default.
+Additions:
+    -Added "Press F2 To See Controls" text to the top right corner.
+Changes:
+    -Control Guide is now off by default.
 
 v0.0.13.2
--Reverted Player 2 controls back to the arrow keys, with the sprint key being right ctrl.
--Got rid of a stray 0 in the code that was in a random place and didn't effect anything
-(Kinda regretting the decision).
+Changes:
+    -Reverted Player 2 controls back to the arrow keys, with the sprint key being right ctrl.
+    -Got rid of a stray 0 in the code that was in a random place and didn't effect anything
+    (Kinda regretting the decision).
 
 v0.0.13.3
--Internal code rearrangment to make version changes slightly quicker. Nothing was changed.
+Changes:
+    -Internal code rearrangment to make version changes slightly quicker. Nothing was changed.
 
 v0.0.13.4
--Increased Sprint duration to 2 seconds instead of the previous 1 second.
--Rebalanced Sprinting
-    -Sprinting causes you to get fatigued when you run too long, and it takes longer to
-    recover.
-    -Recovering before you get fatigued allows you to recover slightly quicker.
+Changes:
+    -Increased Sprint duration to 2 seconds instead of the previous 1 second.
+    -Rebalanced Sprinting.
+        -Sprinting causes you to get fatigued when you run too long, and it takes longer to
+        recover.
+        -Recovering before you get fatigued allows you to recover slightly quicker.
 
 v0.0.13.5
 Bug Fixes:
--Fixed player size being inaccurate when resetting the map.
+    -Fixed player size being inaccurate when resetting the map.
 
 v0.0.13.6
--Added "WarriorBlockEngine 0.1" to the debug statistics screen, denoting the engine version.
+Additions:
+    Debug Stats:
+        -Added "WarriorBlockEngine 0.1" to the debug statistics screen, denoting the engine version.
 Bug Fixes:
--Fixed Player 2 controls not being completely updated, resulting in buggy movement.
+    -Fixed Player 2 controls not being completely updated, resulting in buggy movement.
+
+v0.0.13.6 Dev?
+Additions:
+    -Temporarily added a stat to determine distance from enemy, among other debug stats.
+Removals:
+    -Temporarily removed multiplayer until it can be improved upon.
+Known Bugs:
+    -Multiple systems are now broken due to code reworking.
+
+v0.0.13.6 Dev 11
+Notes:
+    -Started work on enemy collision.
+        -Currently very broken.
+        -Low level sentience accidentally achieved???
+
+v0.0.13.6 Dev 13
+Additions:
+    -Added a lives system.
+        -Player starts with 3 lives and loses a life when touching an enemy.
+        -Dying starts a respawn timer. When you die, you disappear until the respawn timer runs out.
+        -Respawning takes 5 seconds, and causes you to return to your spawn point.
+        -The lives are considered "extra" lives, so 0 lives does not make you game over.
+        -If a player recieves another life while dead in some way, the player will respawn immediately.
+Bug Fixes:
+    -Game is no longer sentient. I think...
+
+v0.0.13.6 Dev 14
+Additions:
+    -Attempted to add a health system.
+        -Health system does not work and there are no noticeable gameplay changes.
+
+v0.0.13.6 Dev 15
+Additions:
+    -Added a fully working health system.
+        -The player has 8 health, and losing all health (health going down to 0), kills the player.
+        -The player loses health when touching an enemy.
+        -Once hit, the player has 0.5 seconds of invincibility.
+
+v0.0.13.6 Dev 16
+Additions:
+    -Player's health is indicated by their color.
+        -The colors are red, orange, yellow, lime, light blue, sky blue, blue, purple, for
+        8, 7, 6, 5, 4, 3, 2, 1 health respectively.
+
+v0.0.13.6 Dev 17
+Notes:
+    -Learning OOP and class files.
+
+v0.0.13.6 Dev 30
+Notes:
+    -1 of many attempts to get working collision physics.
+
+v0.0.13.6 Dev 31
+Additions:
+    -First working attempt at collision physics.
+        -Colliding with an enemy stops the player from going through the enemy (enemy is only a test
+        object. This feature is intended for walls).
+Known Bugs:
+    -If the player travels faster than 1 pixel, the collision system does not work.
+
+v0.0.13.6 Dev 33
+Changes:
+    -Completely changed and revamped the collision physics.
+        -The player is now pushed out of the enemy at all points, even when inside of the enemy for any 
+        reason.
+        -The player can still go through the enemy like before, but it pushed out.
+
+v0.0.13.6 Dev 35
+Changes:
+    -Completely changed and revamped the collision physics again to be more robust.
+        -Only 1 side of a wall is detected at a time to ensure that the player cannot move through each
+        individual side of a wall.
+        -The player can no longer go through a wall without the player position being instantly
+        corrected.
+Known Bugs:
+    -The player is still able to be placed inside of a wall while moving, but will reset to the
+    correct position once they stop. This is due to the way movement is handled.
+    -If the player moves at a speed that is higher than the wall's size, the player will go through
+    the wall.
+
+v0.0.13.6 Dev 36
+Changes:
+    -Collision logic is now handled with function parameters so it can easily be applied to multiple
+    players and walls.
+
+v0.0.13.6 Dev 37
+Notes:
+    -Messing around with code for fun. The canvas' X size can be increased with C to break stuff. Lol
+
+v0.0.13.6 Dev 39
+Changes:
+    -Collision logic reverted from function parameters because it broke due to an unknown issue.
+    -healthTimer renamed to iFrames (AKA, invisibility frames) internally.
+    -Reverted Objects back into Variables temporarily until Objects have a valid use-case.
+    -Renamed multiple Variables to have more accurate and descriptive names.
+    -Named Variables in such a way that they can easily be reverted back into objects.
+    -Changed resolution from 1800x900 to 1760x960.
+Removals:
+    -Removed multiple unused Variables for player and enemy.
+Bug Fixes:
+    -Player can no longer add/subtract a number past their max speed/minimum speed.
+Notes:
+    -General code cleanup.
+
+v0.0.13.6 Dev 40
+Notes:
+    -General code cleanup.
+
+v0.0.13.6 Dev 41
+Additions:
+    -Player now turns white if the player is past max health, or below minimum health.
+        -Should never be seen ingame without the use of glitches or mods.
+Changes:
+    -Variables are now objects again.
+Bugfixes:
+    -Fixed the math for enemy collision detection
+        -Now works no matter the player or enemy's size.
+Notes:
+    -The start of complete code reworking/rewriting.
+    -Started rewriting the walking code. Currently does not work.
+
+v0.0.13.6 Dev 43
+Changes:
+    -Rewrote and seperated the Walking and Sprinting code.
+        -Walking and Sprinting can now be individually disabled interally.
+            -Disabling the Walking code also disables Sprinting. This might change in the future.
+Notes:
+    -The decision has been made to make this game a game engine.
+        -This means it will support various types of 2D games (top down, sidescrolling platformer
+        ect...).
+        -The game itself will still be made after the engine is complete (or close enough to
+        completion).
+
+v0.0.13.6 Dev 44
+Additions:
+    -Added mouse support.
+        -The game now detects mouse movement, clicks and unclicks (letting go of mouse click).
+        -Mouse Cursor Coordinates or now shown in the debug text.
+        -Clicking, Not Clicking, Unclicking, and Not Unclicking, are shown in the debug text.
+    -Started work on GUI support.
+        -Clicking the white square in the middle of the screen logs "Press!" in the debug text
+        when clicked.
+Changes:
+    -Changed Wall code to use Classes.
+    -Changed Window Title(browser tab name) to "WarriorBlockEngine".
+    -Rewrote Input Code.
+        -Not all controls are fully implemented yet.
+Known Bugs:
+    -Walls are slightly broken.
+        -If a player runs into a wall from the top or bottom, they teleport to the left or right of
+        the wall, or the player sometimes goes through the wall entirely.
+
+v0.0.13.6 Dev 45
+Notes:
+    -Reupload of Dev 44 to fix the version numbers (Dev 44 was called Dev 43).
+    -No other changes were made.
+
+v0.0.13.6 Dev 46
+Additions:
+    -Start Game has been added.
+        -Before you can play, you have to press the Start Game button.
+        -The button loads in a lot of game code, such as Players, Walls, Enemies, Collision,
+        Text, ect...
+    -Pressing F4 now changes the canvas (game screen) position to the right, center, or left of
+    the browser window.
+Changes:
+    -Repurposed the controls screen for debug info.
+        -All debug text that appeared in the debug console is now ingame to the left side of
+        the screen.
+        -Can be toggled on or off with F9.
+    -Game Version Number and Engine Version Number are now their own variables, making editing them
+    easier.
+Removals:
+    -"Click!", "Unclick!", "No Click!", "No Unclick!", are no longer shown in the debug text.
+    -Removed /*Test Asterisk Comment*/ from the resolution console.log area.
+    -Removed the DefValues Object.
+Known Bugs:
+    -Removal of the DefValues Object causes crashes in this version.
+Notes:
+    -This version was sent to Robotnik08 in a somewhat broken state, and thus was reuploaded
+    minutes later.
+
+v0.0.13.6 Dev 47
+Bug Fixes:
+    -Re-added the DefValues Object to fix crashes caused without it.
+Notes:
+    -This version was incorrectly named due to having been quickly changed and sent to
+    Robotnik08 for testing.
+
+WarriorBlockEngine v0.1.13.6 Dev 48
+Additions:
+    -Clicking and Dragging the player with the mouse will move the player around.
+    -Added a Velocity Counter.
+        -It is used to determine the current speed of the player based on the previous coordinate.
+Changes:
+    -Started rewriting the AABB Collision Logic.
+    -Changed the Player Health-Color code to use a Switch Case rather than If Statements.
+        -The way Health-Color is handled will be changed in the future.
+    -Combined the Block Game JS and WarriorBlockEngine version names into 1.
+        -Block Game JS is now known as the WarriorBlockEngine and is considered an engine that
+        games will be made for, not a game itself.
+Bug Fixes:
+    -The isWalking and isSprinting Object Properties now work as expected.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
