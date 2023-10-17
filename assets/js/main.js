@@ -5,7 +5,7 @@ const ctx = can.getContext("2d");
 const canX = can.width;
 const canY = can.height;
 const gameVersion = "";
-const engineVersion = "WarriorBlockEngine 0.1.13.6 Dev 49";
+const engineVersion = "WarriorBlockEngine 0.1.13.6 Dev 50";
 
 document.addEventListener("keydown",keyDown);
 document.addEventListener("keyup",keyUp);
