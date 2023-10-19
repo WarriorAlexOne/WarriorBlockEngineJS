@@ -30,4 +30,4 @@ as well as having various features such as, but not limited to:<br>
 I'll be adding more as I learn JavaScript, and learn new techniques.<br>
 Anyone who wants to use my code, feel free to use it as you will. My goal is to educate people, as I myself learn. There are plenty of comments, and if you use my code in your own project and feel that you've learned something, I'd appreciate if you credited me, though it isn't necessary.<br>
 
-<br>Have fun programming, just as I am.
+Have fun programming, just as I am.
